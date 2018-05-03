@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title></title>
+	<script >
+		//区间随机数
+		function random(min,max,method){
+			var result=0;
+			number=Math.random();
+			switch(method){
+				case 1:   //包含最小值和最大值
+					result=Math.round(number*(max-min)+min); //四舍五入
+					break;
+				case 2:  //包含最小值没有最大值
+					result=Math.floor(number*(max-min)+min);   //向下取值(只取整数部分)
+					break;
+				case 3:  //包含最大值，没有最小值
+					result=Math.floor(number*(max-min)+min+1);
+			}
+			return result;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
